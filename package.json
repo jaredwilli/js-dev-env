@@ -1,0 +1,51 @@
+{
+  "name": "js-dev-env",
+  "version": "0.1.0",
+  "description": "A javascript development environment starter",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredwilli/js-dev-env.git"
+  },
+  "keywords": [
+    "starter-kit",
+    "dev-environment"
+  ],
+  "author": "Jared Williams <jaredwilli@gmail.com> (http://anti-code.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaredwilli/js-dev-env/issues"
+  },
+  "homepage": "https://github.com/jaredwilli/js-dev-env#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chalk": "^2.3.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-watch": "^3.1.4",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.1.0",
+    "jsdom": "^11.6.2",
+    "localtunnel": "^1.8.3",
+    "mocha": "^5.0.5",
+    "nock": "^9.2.3",
+    "npm-run-all": "^4.1.2",
+    "nsp": "^3.2.1",
+    "numeral": "^2.0.6",
+    "open": "0.0.5",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.4.1",
+    "webpack-dev-middleware": "^3.1.0",
+    "webpack-hot-middleware": "^2.21.2",
+    "webpack-md5-hash": "0.0.6"
+  }
+}
