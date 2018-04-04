@@ -1,12 +1,11 @@
 import path from 'path';
 
 export default {
-    debug: true,
     devtool: 'inline-source-map',
-    noInfo: false,
     target: 'web',
+    mode: 'development',
     entry: [
-        path.join(__dirname, 'src/index')
+        path.resolve(__dirname, 'src/index')
     ],
     output: {
         path: path.resolve(__dirname, 'src'),
@@ -15,15 +14,9 @@ export default {
     },
     plugins: [],
     module: {
-        loaders: [
-            {test: /\.js$/, exclude /node_modules/, loaders ['babel']},
-            {test: /\.css$/, loaders: ['style', 'css']}
+        rules: [
+            {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+            {test: /\.css$/, loaders: ['style-loader', 'css-loader']}
         ]
-    },
-    resolve: {
-        extensions: ['.json', '.js', '.jsx', '.css']
-    },
-    devServer: {
-        publicPath: path.join('/build/')
     }
 };
