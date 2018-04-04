@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "A javascript development environment starter",
   "scripts": {
-      "prestart": "node scripts/startMessage.js",
+      "prestart": "babel-node scripts/startMessage.js",
       "start": "npm-run-all --parallel security-check open:src",
-      "open:src": "node scripts/srcServer.js",
+      "open:src": "babel-node scripts/srcServer.js",
       "security-check": "nsp check",
       "localtunnel": "lt --port 3002",
       "share": "npm-run-all --parallel open:src localtunnel"
