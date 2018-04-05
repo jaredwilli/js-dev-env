@@ -4,11 +4,12 @@
   "description": "A javascript development environment starter",
   "scripts": {
     "prestart": "babel-node scripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src lint:watch",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
     "open:src": "babel-node scripts/srcServer.js",
     "lint": "esw webpack.config.* src scripts --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress scripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3002",
     "share": "npm-run-all --parallel open:src localtunnel"
