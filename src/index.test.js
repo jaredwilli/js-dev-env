@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import jsdom from 'jsdom';
+import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
 describe('index.js', () => {
@@ -12,9 +12,9 @@ describe('index.html', () => {
     it('should say hello', () => {
         const index = fs.readFileSync('./src/index.html', 'utf-8');
 
-        jsdom.env(index, function(err, window) {
+        const { document } = (new JSDOM(index)).window;
+        const h1 = document.getElementsByTagName('h1')[0];
 
-        });
-        expect(index)
+        expect(h1.innerHTML).to.equal('Whats up doc?');
     })
 })
