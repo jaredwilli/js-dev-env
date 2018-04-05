@@ -8,6 +8,7 @@
     "open:src": "babel-node scripts/srcServer.js",
     "lint": "esw webpack.config.* src scripts --color",
     "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress scripts/testSetup.js \"src/**/*.test.js\"",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3002",
     "share": "npm-run-all --parallel open:src localtunnel"
