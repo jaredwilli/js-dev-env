@@ -10,9 +10,9 @@
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress scripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
-    "security-check": "nsp check",
-    "localtunnel": "lt --port 3002",
+    "localtunnel": "lt --port 3001",
     "share": "npm-run-all --parallel open:src localtunnel",
+    "security-check": "nsp check",
     "generate-mock-data": "babel-node scripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
     "start-mockapi": "json-server --watch src/api/db.json --port 3003"
