@@ -4,7 +4,7 @@
   "description": "A javascript development environment starter",
   "scripts": {
     "prestart": "babel-node scripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node scripts/srcServer.js",
     "lint": "esw webpack.config.* src scripts --color",
     "lint:watch": "npm run lint -- --watch",
@@ -12,7 +12,10 @@
     "test:watch": "npm run test -- --watch",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3002",
-    "share": "npm-run-all --parallel open:src localtunnel"
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "generate-mock-data": "babel-node scripts/generateMockData",
+    "prestart-mockapi": "npm run generate-mock-data",
+    "start-mockapi": "json-server --watch src/api/db.json --port 3003"
   },
   "repository": {
     "type": "git",
@@ -45,6 +48,8 @@
     "express": "^4.16.3",
     "html-webpack-plugin": "^3.2.0",
     "jsdom": "^11.7.0",
+    "json-schema-faker": "0.4.2",
+    "json-server": "^0.12.1",
     "localtunnel": "^1.9.0",
     "mocha": "^5.0.5",
     "nock": "^9.2.3",
